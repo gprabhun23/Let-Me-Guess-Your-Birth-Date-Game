@@ -42,9 +42,6 @@ namespace LetMeGuessYourBirthDate
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-			this.btnPlay = new System.Windows.Forms.Button();
-			this.btnExit = new System.Windows.Forms.Button();
-			this.btnCancel = new System.Windows.Forms.Button();
 			this.tcGYBDGame = new System.Windows.Forms.TabControl();
 			this.tcYourDetails = new System.Windows.Forms.TabPage();
 			this.cbGender = new System.Windows.Forms.ComboBox();
@@ -72,6 +69,10 @@ namespace LetMeGuessYourBirthDate
 			this.tcPage5 = new System.Windows.Forms.TabPage();
 			this.btnEnd = new System.Windows.Forms.Button();
 			this.dgvCard5 = new System.Windows.Forms.DataGridView();
+			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.btnExit = new System.Windows.Forms.Button();
+			this.btnCancel = new System.Windows.Forms.Button();
+			this.btnPlay = new System.Windows.Forms.Button();
 			this.tcGYBDGame.SuspendLayout();
 			this.tcYourDetails.SuspendLayout();
 			this.tcPage1.SuspendLayout();
@@ -84,37 +85,8 @@ namespace LetMeGuessYourBirthDate
 			((System.ComponentModel.ISupportInitialize)(this.dgvCard4)).BeginInit();
 			this.tcPage5.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvCard5)).BeginInit();
+			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
-			// 
-			// btnPlay
-			// 
-			this.btnPlay.Location = new System.Drawing.Point(57, 355);
-			this.btnPlay.Name = "btnPlay";
-			this.btnPlay.Size = new System.Drawing.Size(118, 44);
-			this.btnPlay.TabIndex = 0;
-			this.btnPlay.Text = "PLAY";
-			this.btnPlay.UseVisualStyleBackColor = true;
-			this.btnPlay.Click += new System.EventHandler(this.BtnPlayClick);
-			// 
-			// btnExit
-			// 
-			this.btnExit.Location = new System.Drawing.Point(308, 355);
-			this.btnExit.Name = "btnExit";
-			this.btnExit.Size = new System.Drawing.Size(116, 44);
-			this.btnExit.TabIndex = 3;
-			this.btnExit.Text = "EXIT";
-			this.btnExit.UseVisualStyleBackColor = true;
-			this.btnExit.Click += new System.EventHandler(this.BtnExitClick);
-			// 
-			// btnCancel
-			// 
-			this.btnCancel.Location = new System.Drawing.Point(184, 355);
-			this.btnCancel.Name = "btnCancel";
-			this.btnCancel.Size = new System.Drawing.Size(118, 44);
-			this.btnCancel.TabIndex = 2;
-			this.btnCancel.Text = "CANCEL";
-			this.btnCancel.UseVisualStyleBackColor = true;
-			this.btnCancel.Click += new System.EventHandler(this.BtnCancelClick);
 			// 
 			// tcGYBDGame
 			// 
@@ -128,11 +100,12 @@ namespace LetMeGuessYourBirthDate
 			this.tcGYBDGame.Name = "tcGYBDGame";
 			this.tcGYBDGame.Padding = new System.Drawing.Point(14, 3);
 			this.tcGYBDGame.SelectedIndex = 0;
-			this.tcGYBDGame.Size = new System.Drawing.Size(450, 337);
+			this.tcGYBDGame.Size = new System.Drawing.Size(481, 375);
 			this.tcGYBDGame.TabIndex = 1;
 			// 
 			// tcYourDetails
 			// 
+			this.tcYourDetails.BackColor = System.Drawing.Color.White;
 			this.tcYourDetails.Controls.Add(this.cbGender);
 			this.tcYourDetails.Controls.Add(this.cbBirthMonth);
 			this.tcYourDetails.Controls.Add(this.label10);
@@ -146,21 +119,22 @@ namespace LetMeGuessYourBirthDate
 			this.tcYourDetails.Location = new System.Drawing.Point(4, 22);
 			this.tcYourDetails.Name = "tcYourDetails";
 			this.tcYourDetails.Padding = new System.Windows.Forms.Padding(3);
-			this.tcYourDetails.Size = new System.Drawing.Size(442, 311);
+			this.tcYourDetails.Size = new System.Drawing.Size(473, 349);
 			this.tcYourDetails.TabIndex = 0;
 			this.tcYourDetails.Text = "YOUR DETAILS";
-			this.tcYourDetails.UseVisualStyleBackColor = true;
 			// 
 			// cbGender
 			// 
+			this.cbGender.BackColor = System.Drawing.SystemColors.InactiveBorder;
 			this.cbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbGender.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cbGender.FormattingEnabled = true;
 			this.cbGender.Items.AddRange(new object[] {
 									"MALE",
 									"FEMALE"});
-			this.cbGender.Location = new System.Drawing.Point(168, 140);
+			this.cbGender.Location = new System.Drawing.Point(186, 155);
 			this.cbGender.Name = "cbGender";
-			this.cbGender.Size = new System.Drawing.Size(88, 21);
+			this.cbGender.Size = new System.Drawing.Size(115, 28);
 			this.cbGender.TabIndex = 2;
 			this.cbGender.Leave += new System.EventHandler(this.CbGenderLeave);
 			this.cbGender.Enter += new System.EventHandler(this.CbGenderEnter);
@@ -168,7 +142,9 @@ namespace LetMeGuessYourBirthDate
 			// 
 			// cbBirthMonth
 			// 
+			this.cbBirthMonth.BackColor = System.Drawing.SystemColors.InactiveBorder;
 			this.cbBirthMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbBirthMonth.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cbBirthMonth.FormattingEnabled = true;
 			this.cbBirthMonth.Items.AddRange(new object[] {
 									"JAN",
@@ -183,9 +159,9 @@ namespace LetMeGuessYourBirthDate
 									"OCT",
 									"NOV",
 									"DEC"});
-			this.cbBirthMonth.Location = new System.Drawing.Point(168, 216);
+			this.cbBirthMonth.Location = new System.Drawing.Point(186, 242);
 			this.cbBirthMonth.Name = "cbBirthMonth";
-			this.cbBirthMonth.Size = new System.Drawing.Size(100, 21);
+			this.cbBirthMonth.Size = new System.Drawing.Size(100, 28);
 			this.cbBirthMonth.TabIndex = 4;
 			this.cbBirthMonth.Leave += new System.EventHandler(this.CbBirthMonthLeave);
 			this.cbBirthMonth.Enter += new System.EventHandler(this.CbBirthMonthEnter);
@@ -193,7 +169,9 @@ namespace LetMeGuessYourBirthDate
 			// 
 			// label10
 			// 
-			this.label10.Location = new System.Drawing.Point(25, 140);
+			this.label10.BackColor = System.Drawing.Color.Transparent;
+			this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label10.Location = new System.Drawing.Point(43, 155);
 			this.label10.Name = "label10";
 			this.label10.Size = new System.Drawing.Size(137, 23);
 			this.label10.TabIndex = 7;
@@ -202,9 +180,11 @@ namespace LetMeGuessYourBirthDate
 			// 
 			// tbBirthYear
 			// 
-			this.tbBirthYear.Location = new System.Drawing.Point(168, 180);
+			this.tbBirthYear.BackColor = System.Drawing.SystemColors.InactiveBorder;
+			this.tbBirthYear.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.tbBirthYear.Location = new System.Drawing.Point(186, 199);
 			this.tbBirthYear.Name = "tbBirthYear";
-			this.tbBirthYear.Size = new System.Drawing.Size(63, 20);
+			this.tbBirthYear.Size = new System.Drawing.Size(82, 26);
 			this.tbBirthYear.TabIndex = 3;
 			this.tbBirthYear.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TbBirthYearKeyDown);
 			this.tbBirthYear.Leave += new System.EventHandler(this.TbBirthYearLeave);
@@ -212,7 +192,9 @@ namespace LetMeGuessYourBirthDate
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(25, 214);
+			this.label3.BackColor = System.Drawing.Color.Transparent;
+			this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label3.Location = new System.Drawing.Point(43, 245);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(137, 23);
 			this.label3.TabIndex = 5;
@@ -221,7 +203,9 @@ namespace LetMeGuessYourBirthDate
 			// 
 			// label2
 			// 
-			this.label2.Location = new System.Drawing.Point(25, 177);
+			this.label2.BackColor = System.Drawing.Color.Transparent;
+			this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.Location = new System.Drawing.Point(43, 199);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(137, 23);
 			this.label2.TabIndex = 6;
@@ -230,42 +214,46 @@ namespace LetMeGuessYourBirthDate
 			// 
 			// tbYourLastName
 			// 
+			this.tbYourLastName.BackColor = System.Drawing.SystemColors.InactiveBorder;
 			this.tbYourLastName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-			this.tbYourLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.tbYourLastName.Location = new System.Drawing.Point(168, 102);
+			this.tbYourLastName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.tbYourLastName.Location = new System.Drawing.Point(186, 112);
 			this.tbYourLastName.Name = "tbYourLastName";
-			this.tbYourLastName.Size = new System.Drawing.Size(234, 21);
+			this.tbYourLastName.Size = new System.Drawing.Size(259, 26);
 			this.tbYourLastName.TabIndex = 1;
 			this.tbYourLastName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TbYourLastNameKeyDown);
 			this.tbYourLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbYourLastNameKeyPress);
 			// 
 			// tbYourFirstName
 			// 
+			this.tbYourFirstName.BackColor = System.Drawing.SystemColors.InactiveBorder;
 			this.tbYourFirstName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-			this.tbYourFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.tbYourFirstName.Location = new System.Drawing.Point(168, 65);
+			this.tbYourFirstName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.tbYourFirstName.Location = new System.Drawing.Point(186, 70);
 			this.tbYourFirstName.Name = "tbYourFirstName";
-			this.tbYourFirstName.Size = new System.Drawing.Size(234, 21);
+			this.tbYourFirstName.Size = new System.Drawing.Size(259, 26);
 			this.tbYourFirstName.TabIndex = 0;
 			this.tbYourFirstName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TbYourFirstNameKeyDown);
 			this.tbYourFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbYourFirstNameKeyPress);
 			// 
 			// label9
 			// 
-			this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label9.Location = new System.Drawing.Point(33, 102);
+			this.label9.BackColor = System.Drawing.Color.Transparent;
+			this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label9.Location = new System.Drawing.Point(6, 112);
 			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(129, 23);
+			this.label9.Size = new System.Drawing.Size(174, 23);
 			this.label9.TabIndex = 8;
 			this.label9.Text = "Your Last Name";
 			this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// label1
 			// 
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(33, 63);
+			this.label1.BackColor = System.Drawing.Color.Transparent;
+			this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.Location = new System.Drawing.Point(17, 71);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(129, 23);
+			this.label1.Size = new System.Drawing.Size(163, 23);
 			this.label1.TabIndex = 9;
 			this.label1.Text = "Your First Name";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -277,14 +265,14 @@ namespace LetMeGuessYourBirthDate
 			this.tcPage1.Location = new System.Drawing.Point(4, 22);
 			this.tcPage1.Name = "tcPage1";
 			this.tcPage1.Padding = new System.Windows.Forms.Padding(3);
-			this.tcPage1.Size = new System.Drawing.Size(442, 311);
+			this.tcPage1.Size = new System.Drawing.Size(473, 349);
 			this.tcPage1.TabIndex = 1;
 			this.tcPage1.Text = "CARD 1";
 			this.tcPage1.UseVisualStyleBackColor = true;
 			// 
 			// btnCard1
 			// 
-			this.btnCard1.Location = new System.Drawing.Point(154, 258);
+			this.btnCard1.Location = new System.Drawing.Point(172, 294);
 			this.btnCard1.Name = "btnCard1";
 			this.btnCard1.Size = new System.Drawing.Size(128, 35);
 			this.btnCard1.TabIndex = 0;
@@ -312,7 +300,7 @@ namespace LetMeGuessYourBirthDate
 			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
 			this.dgvCard1.DefaultCellStyle = dataGridViewCellStyle1;
 			this.dgvCard1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-			this.dgvCard1.Location = new System.Drawing.Point(81, 18);
+			this.dgvCard1.Location = new System.Drawing.Point(96, 43);
 			this.dgvCard1.Name = "dgvCard1";
 			this.dgvCard1.ReadOnly = true;
 			this.dgvCard1.RowHeadersVisible = false;
@@ -328,14 +316,14 @@ namespace LetMeGuessYourBirthDate
 			this.tcPage2.Location = new System.Drawing.Point(4, 22);
 			this.tcPage2.Name = "tcPage2";
 			this.tcPage2.Padding = new System.Windows.Forms.Padding(3);
-			this.tcPage2.Size = new System.Drawing.Size(442, 311);
+			this.tcPage2.Size = new System.Drawing.Size(473, 349);
 			this.tcPage2.TabIndex = 2;
 			this.tcPage2.Text = "CARD 2";
 			this.tcPage2.UseVisualStyleBackColor = true;
 			// 
 			// btnCard2
 			// 
-			this.btnCard2.Location = new System.Drawing.Point(154, 258);
+			this.btnCard2.Location = new System.Drawing.Point(172, 294);
 			this.btnCard2.Name = "btnCard2";
 			this.btnCard2.Size = new System.Drawing.Size(128, 35);
 			this.btnCard2.TabIndex = 0;
@@ -371,7 +359,7 @@ namespace LetMeGuessYourBirthDate
 			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
 			this.dgvCard2.DefaultCellStyle = dataGridViewCellStyle3;
 			this.dgvCard2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-			this.dgvCard2.Location = new System.Drawing.Point(81, 18);
+			this.dgvCard2.Location = new System.Drawing.Point(96, 43);
 			this.dgvCard2.Name = "dgvCard2";
 			this.dgvCard2.ReadOnly = true;
 			this.dgvCard2.RowHeadersVisible = false;
@@ -386,14 +374,14 @@ namespace LetMeGuessYourBirthDate
 			this.tcPage3.Location = new System.Drawing.Point(4, 22);
 			this.tcPage3.Name = "tcPage3";
 			this.tcPage3.Padding = new System.Windows.Forms.Padding(3);
-			this.tcPage3.Size = new System.Drawing.Size(442, 311);
+			this.tcPage3.Size = new System.Drawing.Size(473, 349);
 			this.tcPage3.TabIndex = 3;
 			this.tcPage3.Text = "CARD 3";
 			this.tcPage3.UseVisualStyleBackColor = true;
 			// 
 			// btnCard3
 			// 
-			this.btnCard3.Location = new System.Drawing.Point(154, 258);
+			this.btnCard3.Location = new System.Drawing.Point(172, 294);
 			this.btnCard3.Name = "btnCard3";
 			this.btnCard3.Size = new System.Drawing.Size(128, 35);
 			this.btnCard3.TabIndex = 0;
@@ -421,7 +409,7 @@ namespace LetMeGuessYourBirthDate
 			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
 			this.dgvCard3.DefaultCellStyle = dataGridViewCellStyle4;
 			this.dgvCard3.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-			this.dgvCard3.Location = new System.Drawing.Point(81, 18);
+			this.dgvCard3.Location = new System.Drawing.Point(96, 43);
 			this.dgvCard3.Name = "dgvCard3";
 			this.dgvCard3.ReadOnly = true;
 			this.dgvCard3.RowHeadersVisible = false;
@@ -436,14 +424,14 @@ namespace LetMeGuessYourBirthDate
 			this.tcPage4.Location = new System.Drawing.Point(4, 22);
 			this.tcPage4.Name = "tcPage4";
 			this.tcPage4.Padding = new System.Windows.Forms.Padding(3);
-			this.tcPage4.Size = new System.Drawing.Size(442, 311);
+			this.tcPage4.Size = new System.Drawing.Size(473, 349);
 			this.tcPage4.TabIndex = 4;
 			this.tcPage4.Text = "CARD 4";
 			this.tcPage4.UseVisualStyleBackColor = true;
 			// 
 			// btnCard4
 			// 
-			this.btnCard4.Location = new System.Drawing.Point(154, 258);
+			this.btnCard4.Location = new System.Drawing.Point(172, 294);
 			this.btnCard4.Name = "btnCard4";
 			this.btnCard4.Size = new System.Drawing.Size(128, 35);
 			this.btnCard4.TabIndex = 0;
@@ -471,7 +459,7 @@ namespace LetMeGuessYourBirthDate
 			dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
 			this.dgvCard4.DefaultCellStyle = dataGridViewCellStyle5;
 			this.dgvCard4.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-			this.dgvCard4.Location = new System.Drawing.Point(81, 18);
+			this.dgvCard4.Location = new System.Drawing.Point(96, 43);
 			this.dgvCard4.Name = "dgvCard4";
 			this.dgvCard4.ReadOnly = true;
 			this.dgvCard4.RowHeadersVisible = false;
@@ -486,14 +474,14 @@ namespace LetMeGuessYourBirthDate
 			this.tcPage5.Location = new System.Drawing.Point(4, 22);
 			this.tcPage5.Name = "tcPage5";
 			this.tcPage5.Padding = new System.Windows.Forms.Padding(3);
-			this.tcPage5.Size = new System.Drawing.Size(442, 311);
+			this.tcPage5.Size = new System.Drawing.Size(473, 349);
 			this.tcPage5.TabIndex = 5;
 			this.tcPage5.Text = "CARD 5";
 			this.tcPage5.UseVisualStyleBackColor = true;
 			// 
 			// btnEnd
 			// 
-			this.btnEnd.Location = new System.Drawing.Point(154, 258);
+			this.btnEnd.Location = new System.Drawing.Point(172, 294);
 			this.btnEnd.Name = "btnEnd";
 			this.btnEnd.Size = new System.Drawing.Size(128, 35);
 			this.btnEnd.TabIndex = 0;
@@ -521,7 +509,7 @@ namespace LetMeGuessYourBirthDate
 			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
 			this.dgvCard5.DefaultCellStyle = dataGridViewCellStyle6;
 			this.dgvCard5.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-			this.dgvCard5.Location = new System.Drawing.Point(81, 18);
+			this.dgvCard5.Location = new System.Drawing.Point(96, 43);
 			this.dgvCard5.Name = "dgvCard5";
 			this.dgvCard5.ReadOnly = true;
 			this.dgvCard5.RowHeadersVisible = false;
@@ -529,16 +517,83 @@ namespace LetMeGuessYourBirthDate
 			this.dgvCard5.Size = new System.Drawing.Size(280, 227);
 			this.dgvCard5.TabIndex = 1;
 			// 
+			// groupBox1
+			// 
+			this.groupBox1.Controls.Add(this.btnExit);
+			this.groupBox1.Controls.Add(this.btnCancel);
+			this.groupBox1.Controls.Add(this.btnPlay);
+			this.groupBox1.Location = new System.Drawing.Point(508, 27);
+			this.groupBox1.Name = "groupBox1";
+			this.groupBox1.Size = new System.Drawing.Size(198, 360);
+			this.groupBox1.TabIndex = 2;
+			this.groupBox1.TabStop = false;
+			// 
+			// btnExit
+			// 
+			this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(128)))), ((int)(((byte)(227)))));
+			this.btnExit.FlatAppearance.BorderColor = System.Drawing.SystemColors.Info;
+			this.btnExit.FlatAppearance.BorderSize = 2;
+			this.btnExit.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+			this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+			this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnExit.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnExit.ForeColor = System.Drawing.Color.LemonChiffon;
+			this.btnExit.Location = new System.Drawing.Point(15, 225);
+			this.btnExit.Name = "btnExit";
+			this.btnExit.Size = new System.Drawing.Size(168, 44);
+			this.btnExit.TabIndex = 6;
+			this.btnExit.Text = "EXIT";
+			this.btnExit.UseVisualStyleBackColor = false;
+			this.btnExit.Click += new System.EventHandler(this.BtnExitClick);
+			// 
+			// btnCancel
+			// 
+			this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(128)))), ((int)(((byte)(227)))));
+			this.btnCancel.FlatAppearance.BorderColor = System.Drawing.SystemColors.Info;
+			this.btnCancel.FlatAppearance.BorderSize = 2;
+			this.btnCancel.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+			this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+			this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnCancel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnCancel.ForeColor = System.Drawing.Color.LemonChiffon;
+			this.btnCancel.Location = new System.Drawing.Point(15, 158);
+			this.btnCancel.Name = "btnCancel";
+			this.btnCancel.Size = new System.Drawing.Size(168, 44);
+			this.btnCancel.TabIndex = 5;
+			this.btnCancel.Text = "CANCEL";
+			this.btnCancel.UseVisualStyleBackColor = false;
+			this.btnCancel.Click += new System.EventHandler(this.BtnCancelClick);
+			// 
+			// btnPlay
+			// 
+			this.btnPlay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(128)))), ((int)(((byte)(227)))));
+			this.btnPlay.FlatAppearance.BorderColor = System.Drawing.SystemColors.Info;
+			this.btnPlay.FlatAppearance.BorderSize = 2;
+			this.btnPlay.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			this.btnPlay.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+			this.btnPlay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+			this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnPlay.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnPlay.ForeColor = System.Drawing.Color.LemonChiffon;
+			this.btnPlay.Location = new System.Drawing.Point(15, 92);
+			this.btnPlay.Name = "btnPlay";
+			this.btnPlay.Size = new System.Drawing.Size(168, 44);
+			this.btnPlay.TabIndex = 4;
+			this.btnPlay.Text = "PLAY";
+			this.btnPlay.UseVisualStyleBackColor = false;
+			this.btnPlay.Click += new System.EventHandler(this.BtnPlayClick);
+			// 
 			// GuessYourBirthDate
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-			this.ClientSize = new System.Drawing.Size(474, 411);
+			this.BackColor = System.Drawing.Color.DodgerBlue;
+			this.ClientSize = new System.Drawing.Size(717, 399);
+			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.tcGYBDGame);
-			this.Controls.Add(this.btnExit);
-			this.Controls.Add(this.btnCancel);
-			this.Controls.Add(this.btnPlay);
+			this.MaximizeBox = false;
 			this.Name = "GuessYourBirthDate";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "LET ME GUESS YOUR BIRTHDATE !";
@@ -556,8 +611,10 @@ namespace LetMeGuessYourBirthDate
 			((System.ComponentModel.ISupportInitialize)(this.dgvCard4)).EndInit();
 			this.tcPage5.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dgvCard5)).EndInit();
+			this.groupBox1.ResumeLayout(false);
 			this.ResumeLayout(false);
 		}
+		private System.Windows.Forms.GroupBox groupBox1;
 		private System.Windows.Forms.TabPage tcPage1;
 		private System.Windows.Forms.TabPage tcPage2;
 		private System.Windows.Forms.TabPage tcPage3;

@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Speech.Synthesis;
+using System.Drawing.Drawing2D;
 
 namespace LetMeGuessYourBirthDate
 {
@@ -146,6 +147,41 @@ namespace LetMeGuessYourBirthDate
 		{
 			tcGYBDGame.Enabled=false;
 			btnCancel.Enabled=false;
+			this.Paint+=new PaintEventHandler(GuessYourBirthDate_Paint);
+			groupBox1.Paint+=new PaintEventHandler(groupBox1_Paint);
+			tcPage1.Paint+=tcGYBDGame_Paint;
+			tcYourDetails.Paint+= tcGYBDGame_Paint;
+			tcPage2.Paint+= tcGYBDGame_Paint;
+			tcPage3.Paint+=tcGYBDGame_Paint;
+			tcPage4.Paint+=tcGYBDGame_Paint;
+			tcPage5.Paint+=tcGYBDGame_Paint;
+		}
+
+		void tcGYBDGame_Paint(object sender, PaintEventArgs e)
+		{
+			Graphics graphics = e.Graphics;
+			Rectangle gradient_rectangle = new Rectangle(0, 0, Width, Height);
+			//Brush b=new HatchBrush(HatchStyle.DiagonalBrick,Color.Wheat);
+			Brush b = new LinearGradientBrush(gradient_rectangle, Color.White, Color.FromArgb(57, 128, 227),LinearGradientMode.Vertical);
+			graphics.FillRectangle(b, gradient_rectangle);
+		}
+
+		void groupBox1_Paint(object sender, PaintEventArgs e)
+		{
+			Graphics graphics = e.Graphics;
+			Rectangle gradient_rectangle = new Rectangle(0, 0, Width, Height);
+			//Brush b=new HatchBrush(HatchStyle.DiagonalBrick,Color.Wheat);
+			Brush b = new LinearGradientBrush(gradient_rectangle, Color.FromArgb(57, 128, 227), Color.FromArgb(0, 0, 0),LinearGradientMode.Vertical);
+			graphics.FillRectangle(b, gradient_rectangle);
+		}
+
+		void GuessYourBirthDate_Paint(object sender, PaintEventArgs e)
+		{
+			Graphics graphics = e.Graphics;
+			Rectangle gradient_rectangle = new Rectangle(0, 0, Width, Height);
+			//Brush b=new HatchBrush(HatchStyle.DiagonalBrick,Color.Red,Color.Yellow);
+			Brush b = new LinearGradientBrush(gradient_rectangle, Color.FromArgb(0, 0, 0), Color.FromArgb(57, 128, 227), 65f);
+			graphics.FillRectangle(b, gradient_rectangle);
 		}
 		
 		void BtnPlayClick(object sender, EventArgs e)
@@ -158,6 +194,7 @@ namespace LetMeGuessYourBirthDate
 				pe.DisableSelected(dgv[i-1]);
 				dgv[i-1].Enabled=false;
 			}
+			pe.PlaySpeech(objSys);
 			dgvCard1.ClearSelection();
 			tbYourFirstName.Focus();
 		}

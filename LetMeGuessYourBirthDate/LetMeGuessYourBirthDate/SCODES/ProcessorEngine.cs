@@ -125,6 +125,9 @@ namespace LetMeGuessYourBirthDate
 		{
 			dgv.ClearSelection();
 		}
-
+		public void PlaySpeech(SpeechSynthesizer objSys)
+		{
+			objSys.Speak("Hi, Let's Play the Game, Enter Your Details First including Birth Month And Year ");
+		}
 	}
 }
