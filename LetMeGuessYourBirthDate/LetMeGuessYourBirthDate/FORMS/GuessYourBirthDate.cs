@@ -138,6 +138,9 @@ namespace LetMeGuessYourBirthDate
 				{
 					pe.InitialSpeech(objSys,cbGender.Text,tbYourFirstName.Text,tbYourLastName.Text,2);
 					nextPage();
+					disableAllBtn();
+					tcYourDetails.Enabled=false;
+					btnCard1.Enabled=true;
 					btnCard1.Focus();
 				}
 			}
@@ -180,7 +183,7 @@ namespace LetMeGuessYourBirthDate
 			Graphics graphics = e.Graphics;
 			Rectangle gradient_rectangle = new Rectangle(0, 0, Width, Height);
 			//Brush b=new HatchBrush(HatchStyle.DiagonalBrick,Color.Red,Color.Yellow);
-			Brush b = new LinearGradientBrush(gradient_rectangle, Color.FromArgb(0, 0, 0), Color.FromArgb(57, 128, 227), 65f);
+			Brush b = new LinearGradientBrush(gradient_rectangle, Color.FromArgb(0, 0, 0), Color.FromArgb(57, 128, 227), LinearGradientMode.BackwardDiagonal);
 			graphics.FillRectangle(b, gradient_rectangle);
 		}
 		
@@ -260,7 +263,14 @@ namespace LetMeGuessYourBirthDate
 			tcGYBDGame.SelectedIndex=0;
 			btnPlay.Focus();
 		}
-	
+		private void disableAllBtn()
+		{
+			btnCard1.Enabled=false;
+			btnCard2.Enabled=false;
+			btnCard3.Enabled=false;
+			btnCard4.Enabled=false;
+			btnEnd.Enabled=false;
+		}
 		void BtnCard1Click(object sender, EventArgs e)
 		{
 			pe.SpeakDialogue(objSys);
@@ -268,12 +278,16 @@ namespace LetMeGuessYourBirthDate
 			{
 				cardVal1=pe.getCellValue(dgvCard1);
 				nextPage();
+				disableAllBtn();
+				btnCard2.Enabled=true;
 				btnCard2.Focus();
 			}
 			else
 			{
 				cardVal1=0;
 				nextPage();
+				disableAllBtn();
+				btnCard2.Enabled=true;
 				btnCard2.Focus();
 			}
 		}
@@ -285,12 +299,16 @@ namespace LetMeGuessYourBirthDate
 			{
 				cardVal2=pe.getCellValue(dgvCard2);
 				nextPage();
+				disableAllBtn();
+				btnCard3.Enabled=true;
 				btnCard3.Focus();
 			}
 			else
 			{
 				cardVal2=0;
 				nextPage();
+				disableAllBtn();
+				btnCard3.Enabled=true;
 				btnCard3.Focus();
 			}
 		}
@@ -302,12 +320,16 @@ namespace LetMeGuessYourBirthDate
 			{
 				cardVal3=pe.getCellValue(dgvCard3);
 				nextPage();
+				disableAllBtn();
+				btnCard4.Enabled=true;
 				btnCard4.Focus();
 			}
 			else
 			{
 				cardVal3=0;
 				nextPage();
+				disableAllBtn();
+				btnCard4.Enabled=true;
 				btnCard4.Focus();
 			}
 		}
@@ -319,12 +341,16 @@ namespace LetMeGuessYourBirthDate
 			{
 				cardVal4=pe.getCellValue(dgvCard4);
 				nextPage();
+				disableAllBtn();
+				btnEnd.Enabled=true;
 				btnEnd.Focus();
 			}
 			else
 			{
 				cardVal4=0;
 				nextPage();
+				disableAllBtn();
+				btnEnd.Enabled=true;
 				btnEnd.Focus();
 			}
 		}

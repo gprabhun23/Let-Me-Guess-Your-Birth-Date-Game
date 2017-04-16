@@ -98,7 +98,7 @@ namespace LetMeGuessYourBirthDate
 			this.tcGYBDGame.Controls.Add(this.tcPage5);
 			this.tcGYBDGame.Location = new System.Drawing.Point(12, 12);
 			this.tcGYBDGame.Name = "tcGYBDGame";
-			this.tcGYBDGame.Padding = new System.Drawing.Point(14, 3);
+			this.tcGYBDGame.Padding = new System.Drawing.Point(17, 3);
 			this.tcGYBDGame.SelectedIndex = 0;
 			this.tcGYBDGame.Size = new System.Drawing.Size(481, 375);
 			this.tcGYBDGame.TabIndex = 1;
@@ -272,12 +272,15 @@ namespace LetMeGuessYourBirthDate
 			// 
 			// btnCard1
 			// 
-			this.btnCard1.Location = new System.Drawing.Point(172, 294);
+			this.btnCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(128)))), ((int)(((byte)(227)))));
+			this.btnCard1.FlatAppearance.BorderColor = System.Drawing.SystemColors.Info;
+			this.btnCard1.ForeColor = System.Drawing.Color.White;
+			this.btnCard1.Location = new System.Drawing.Point(150, 285);
 			this.btnCard1.Name = "btnCard1";
-			this.btnCard1.Size = new System.Drawing.Size(128, 35);
+			this.btnCard1.Size = new System.Drawing.Size(174, 49);
 			this.btnCard1.TabIndex = 0;
 			this.btnCard1.Text = "NEXT >>";
-			this.btnCard1.UseVisualStyleBackColor = true;
+			this.btnCard1.UseVisualStyleBackColor = false;
 			this.btnCard1.Click += new System.EventHandler(this.BtnCard1Click);
 			// 
 			// dgvCard1
@@ -294,7 +297,7 @@ namespace LetMeGuessYourBirthDate
 			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
 			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
 			dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+			dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
 			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Window;
 			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
 			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -323,12 +326,15 @@ namespace LetMeGuessYourBirthDate
 			// 
 			// btnCard2
 			// 
-			this.btnCard2.Location = new System.Drawing.Point(172, 294);
+			this.btnCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(128)))), ((int)(((byte)(227)))));
+			this.btnCard2.FlatAppearance.BorderColor = System.Drawing.SystemColors.Info;
+			this.btnCard2.ForeColor = System.Drawing.Color.White;
+			this.btnCard2.Location = new System.Drawing.Point(150, 285);
 			this.btnCard2.Name = "btnCard2";
-			this.btnCard2.Size = new System.Drawing.Size(128, 35);
+			this.btnCard2.Size = new System.Drawing.Size(174, 49);
 			this.btnCard2.TabIndex = 0;
 			this.btnCard2.Text = "NEXT >>";
-			this.btnCard2.UseVisualStyleBackColor = true;
+			this.btnCard2.UseVisualStyleBackColor = false;
 			this.btnCard2.Click += new System.EventHandler(this.BtnCard2Click);
 			// 
 			// dgvCard2
@@ -353,7 +359,7 @@ namespace LetMeGuessYourBirthDate
 			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
 			dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
 			dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
 			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Window;
 			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
 			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -381,12 +387,15 @@ namespace LetMeGuessYourBirthDate
 			// 
 			// btnCard3
 			// 
-			this.btnCard3.Location = new System.Drawing.Point(172, 294);
+			this.btnCard3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(128)))), ((int)(((byte)(227)))));
+			this.btnCard3.FlatAppearance.BorderColor = System.Drawing.SystemColors.Info;
+			this.btnCard3.ForeColor = System.Drawing.Color.White;
+			this.btnCard3.Location = new System.Drawing.Point(150, 285);
 			this.btnCard3.Name = "btnCard3";
-			this.btnCard3.Size = new System.Drawing.Size(128, 35);
+			this.btnCard3.Size = new System.Drawing.Size(174, 49);
 			this.btnCard3.TabIndex = 0;
 			this.btnCard3.Text = "NEXT >>";
-			this.btnCard3.UseVisualStyleBackColor = true;
+			this.btnCard3.UseVisualStyleBackColor = false;
 			this.btnCard3.Click += new System.EventHandler(this.BtnCard3Click);
 			// 
 			// dgvCard3
@@ -403,7 +412,7 @@ namespace LetMeGuessYourBirthDate
 			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
 			dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
 			dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+			dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
 			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Window;
 			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
 			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -431,12 +440,15 @@ namespace LetMeGuessYourBirthDate
 			// 
 			// btnCard4
 			// 
-			this.btnCard4.Location = new System.Drawing.Point(172, 294);
+			this.btnCard4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(128)))), ((int)(((byte)(227)))));
+			this.btnCard4.FlatAppearance.BorderColor = System.Drawing.SystemColors.Info;
+			this.btnCard4.ForeColor = System.Drawing.Color.White;
+			this.btnCard4.Location = new System.Drawing.Point(150, 285);
 			this.btnCard4.Name = "btnCard4";
-			this.btnCard4.Size = new System.Drawing.Size(128, 35);
+			this.btnCard4.Size = new System.Drawing.Size(174, 49);
 			this.btnCard4.TabIndex = 0;
 			this.btnCard4.Text = "NEXT >>";
-			this.btnCard4.UseVisualStyleBackColor = true;
+			this.btnCard4.UseVisualStyleBackColor = false;
 			this.btnCard4.Click += new System.EventHandler(this.BtnCard4Click);
 			// 
 			// dgvCard4
@@ -453,7 +465,7 @@ namespace LetMeGuessYourBirthDate
 			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
 			dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
 			dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+			dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
 			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Window;
 			dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
 			dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -481,12 +493,15 @@ namespace LetMeGuessYourBirthDate
 			// 
 			// btnEnd
 			// 
-			this.btnEnd.Location = new System.Drawing.Point(172, 294);
+			this.btnEnd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(128)))), ((int)(((byte)(227)))));
+			this.btnEnd.FlatAppearance.BorderColor = System.Drawing.SystemColors.Info;
+			this.btnEnd.ForeColor = System.Drawing.Color.White;
+			this.btnEnd.Location = new System.Drawing.Point(150, 285);
 			this.btnEnd.Name = "btnEnd";
-			this.btnEnd.Size = new System.Drawing.Size(128, 35);
+			this.btnEnd.Size = new System.Drawing.Size(174, 49);
 			this.btnEnd.TabIndex = 0;
 			this.btnEnd.Text = "END";
-			this.btnEnd.UseVisualStyleBackColor = true;
+			this.btnEnd.UseVisualStyleBackColor = false;
 			this.btnEnd.Click += new System.EventHandler(this.BtnEndClick);
 			// 
 			// dgvCard5
@@ -503,7 +518,7 @@ namespace LetMeGuessYourBirthDate
 			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
 			dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
 			dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
 			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Window;
 			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
 			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -534,11 +549,11 @@ namespace LetMeGuessYourBirthDate
 			this.btnExit.FlatAppearance.BorderColor = System.Drawing.SystemColors.Info;
 			this.btnExit.FlatAppearance.BorderSize = 2;
 			this.btnExit.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-			this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+			this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(128)))), ((int)(((byte)(227)))));
+			this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveBorder;
 			this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnExit.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnExit.ForeColor = System.Drawing.Color.LemonChiffon;
+			this.btnExit.ForeColor = System.Drawing.Color.White;
 			this.btnExit.Location = new System.Drawing.Point(15, 225);
 			this.btnExit.Name = "btnExit";
 			this.btnExit.Size = new System.Drawing.Size(168, 44);
@@ -553,11 +568,11 @@ namespace LetMeGuessYourBirthDate
 			this.btnCancel.FlatAppearance.BorderColor = System.Drawing.SystemColors.Info;
 			this.btnCancel.FlatAppearance.BorderSize = 2;
 			this.btnCancel.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-			this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+			this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(128)))), ((int)(((byte)(227)))));
+			this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveBorder;
 			this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnCancel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnCancel.ForeColor = System.Drawing.Color.LemonChiffon;
+			this.btnCancel.ForeColor = System.Drawing.Color.White;
 			this.btnCancel.Location = new System.Drawing.Point(15, 158);
 			this.btnCancel.Name = "btnCancel";
 			this.btnCancel.Size = new System.Drawing.Size(168, 44);
@@ -572,11 +587,11 @@ namespace LetMeGuessYourBirthDate
 			this.btnPlay.FlatAppearance.BorderColor = System.Drawing.SystemColors.Info;
 			this.btnPlay.FlatAppearance.BorderSize = 2;
 			this.btnPlay.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.btnPlay.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-			this.btnPlay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+			this.btnPlay.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(128)))), ((int)(((byte)(227)))));
+			this.btnPlay.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveBorder;
 			this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnPlay.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnPlay.ForeColor = System.Drawing.Color.LemonChiffon;
+			this.btnPlay.ForeColor = System.Drawing.Color.White;
 			this.btnPlay.Location = new System.Drawing.Point(15, 92);
 			this.btnPlay.Name = "btnPlay";
 			this.btnPlay.Size = new System.Drawing.Size(168, 44);
@@ -593,6 +608,8 @@ namespace LetMeGuessYourBirthDate
 			this.ClientSize = new System.Drawing.Size(717, 399);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.tcGYBDGame);
+			this.ForeColor = System.Drawing.Color.Black;
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.MaximizeBox = false;
 			this.Name = "GuessYourBirthDate";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
