@@ -19,9 +19,15 @@ namespace LetMeGuessYourBirthDate
 		SpeechSynthesizer objSys=new SpeechSynthesizer();
 		ProcessorEngine pe=new ProcessorEngine();
 		private int cardVal1=0,cardVal2=0,cardVal3=0,cardVal4=0,cardVal5=0,bDate=0;
+		DataGridView[] dgv=new DataGridView[5];
 		public GuessYourBirthDate()
 		{
 			InitializeComponent();
+			dgv[0]=dgvCard1;
+			dgv[1]=dgvCard2;
+			dgv[2]=dgvCard3;
+			dgv[3]=dgvCard4;
+			dgv[4]=dgvCard5;
 		}
 		
 		void TbBirthYearKeyPress(object sender, KeyPressEventArgs e)
@@ -111,19 +117,18 @@ namespace LetMeGuessYourBirthDate
 			tcGYBDGame.SelectedIndex=(tcGYBDGame.SelectedIndex+1 <tcGYBDGame.TabCount) ? tcGYBDGame.SelectedIndex+1 : tcGYBDGame.SelectedIndex;
 		}
 		
-		private bool ValidateBeforeEnter()
-		{
-			bool valid=true;
-			if(tbYourFirstName.Text!="")
-			{
-				
-			}
-			else
-			{
-				valid=false;
-				if(valid
-			}
-		}
+//		private bool ValidateBeforeEnter()
+//		{
+//			bool valid=true;
+//			if(tbYourFirstName.Text!="")
+//			{
+//				
+//			}
+//			else
+//			{
+//				
+//			}
+//		}
 		void CbBirthMonthKeyDown(object sender, KeyEventArgs e)
 		{
 			if(e.KeyCode==Keys.Enter)
@@ -148,17 +153,12 @@ namespace LetMeGuessYourBirthDate
 			tcGYBDGame.Enabled=true;
 			btnPlay.Enabled=false;
 			btnCancel.Enabled=true;
-			DataGridView[] dgv=new DataGridView[5];
-			dgv[0]=dgvCard1;
-			dgv[1]=dgvCard2;
-			dgv[2]=dgvCard3;
-			dgv[3]=dgvCard4;
-		 	dgv[4]=dgvCard5;
 			for (int i=1;i<=dgv.Length;i++) {
 				dgv[i-1].DataSource=pe.CreateCards(i);
+				pe.DisableSelected(dgv[i-1]);
 				dgv[i-1].Enabled=false;
-				//dgv[i-1].Rows[0].Cells[0].Selected=false;
 			}
+			dgvCard1.ClearSelection();
 			tbYourFirstName.Focus();
 		}
 		

@@ -121,5 +121,10 @@ namespace LetMeGuessYourBirthDate
 			objSys.Speak("Hello "+MrOrMrs(genderDetails)+" "+firstName+" "+lastName+", You Born On "+bDate+" "+birthMonth+" "+birthYear+" ");
 			return true;
 		}
+		public void DisableSelected(System.Windows.Forms.DataGridView dgv)
+		{
+			dgv.ClearSelection();
+		}
+
 	}
 }
