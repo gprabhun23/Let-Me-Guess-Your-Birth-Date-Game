@@ -145,6 +145,7 @@ namespace LetMeGuessYourBirthDate
 			tcPage3.Paint+=tcGYBDGame_Paint;
 			tcPage4.Paint+=tcGYBDGame_Paint;
 			tcPage5.Paint+=tcGYBDGame_Paint;
+			pe.OnLoad(objSys);
 		}
 
 		void tcGYBDGame_Paint(object sender, PaintEventArgs e)

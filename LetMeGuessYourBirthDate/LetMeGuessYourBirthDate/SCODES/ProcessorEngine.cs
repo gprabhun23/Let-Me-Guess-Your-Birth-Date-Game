@@ -179,6 +179,31 @@ namespace LetMeGuessYourBirthDate
 		{
 			objSys.Speak("Hi, Let's Play the Game ");
 		}
+		public void OnLoad(SpeechSynthesizer objSys)
+		{
+			DateTime dtVal=DateTime.Now;
+			string weekDay=dtVal.ToString("dddd");
+			if(dtVal.Hour>=44 && dtVal.Hour <= 11)
+			{
+				objSys.Speak("Good Morning, Today is "+weekDay+"");
+			}
+			else if(dtVal.Hour>=12 && dtNow.Hour <=13)
+			{
+				objSys.Speak("Good Noon, Today is "+weekDay+"");
+			}
+			else if(dtVal.Hour>=14 && dtNow.Hour <=15)
+			{
+				objSys.Speak("Good After Noon, Today is "+weekDay+"");
+			}
+			else if(dtVal.Hour>=16 && dtNow.Hour <=17)
+			{
+				objSys.Speak("Good Evening, Today is "+weekDay+"");
+			}
+			else
+			{
+				objSys.Speak("Good Night, Today is "+weekDay+"");
+			}
+		}
 		public bool ValidateBeforeEnter(SpeechSynthesizer objSys,TextBox tbYourFirstName,TextBox tbYourLastName,TextBox tbBirthYear,ComboBox cbGender,ComboBox cbBirthMonth)
 		{
 			bool valid=true;
