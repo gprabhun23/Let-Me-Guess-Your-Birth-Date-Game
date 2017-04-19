@@ -10,6 +10,7 @@ using System;
 using System.Data;
 using System.Speech;
 using System.Speech.Synthesis;
+using System.Windows.Forms;
 
 namespace LetMeGuessYourBirthDate
 {
@@ -128,6 +129,71 @@ namespace LetMeGuessYourBirthDate
 		public void PlaySpeech(SpeechSynthesizer objSys)
 		{
 			objSys.Speak("Hi, Let's Play the Game ");
+		}
+		public bool ValidateBeforeEnter(SpeechSynthesizer objSys,TextBox tbYourFirstName,TextBox tbYourLastName,TextBox tbBirthYear,ComboBox cbGender,ComboBox cbBirthMonth)
+		{
+			bool valid=true;
+			if(tbYourFirstName.Text!="")
+			{
+				
+			}
+			else
+			{
+				objSys.Speak("Please Enter Your First Name");
+				if(valid!=false)
+				{
+					valid=false;
+				}
+			}
+			if(tbYourLastName.Text!="")
+			{
+				
+			}
+			else
+			{
+				objSys.Speak("Please Enter Your Last Name");
+				if(valid!=false)
+				{
+					valid=false;
+				}
+			}
+			if(tbBirthYear.Text!="")
+			{
+				
+			}
+			else
+			{
+				objSys.Speak("Please Enter Valid Birth Year");
+				if(valid!=false)
+				{
+					valid=false;
+				}
+			}
+			if(cbGender.Text!="")
+			{
+				
+			}
+			else
+			{
+				objSys.Speak("Please Select Valid Gender");
+				if(valid!=false)
+				{
+					valid=false;
+				}
+			}
+			if(cbBirthMonth.Text!="")
+			{
+				
+			}
+			else
+			{
+				objSys.Speak("Please Select Birth Month");
+				if(valid!=false)
+				{
+					valid=false;
+				}
+			}
+			return valid;
 		}
 	}
 }

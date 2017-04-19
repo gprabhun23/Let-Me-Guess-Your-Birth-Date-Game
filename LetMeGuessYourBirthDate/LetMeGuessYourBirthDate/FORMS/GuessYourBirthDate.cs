@@ -118,29 +118,16 @@ namespace LetMeGuessYourBirthDate
 			tcGYBDGame.SelectedIndex=(tcGYBDGame.SelectedIndex+1 <tcGYBDGame.TabCount) ? tcGYBDGame.SelectedIndex+1 : tcGYBDGame.SelectedIndex;
 		}
 		
-//		private bool ValidateBeforeEnter()
-//		{
-//			bool valid=true;
-//			if(tbYourFirstName.Text!="")
-//			{
-//				
-//			}
-//			else
-//			{
-//				
-//			}
-//		}
+		
 		void CbBirthMonthKeyDown(object sender, KeyEventArgs e)
 		{
 			if(e.KeyCode==Keys.Enter)
 			{
-				if(tbYourFirstName.Text!="" && tbBirthYear.Text!="" && tbYourLastName.Text!="" && cbGender.Text!="" && cbBirthMonth.Text!="")
+				if(pe.ValidateBeforeEnter(objSys,tbYourFirstName,tbYourLastName,tbBirthYear,cbGender,cbBirthMonth))
 				{
 					pe.InitialSpeech(objSys,cbGender.Text,tbYourFirstName.Text,tbYourLastName.Text,2);
 					nextPage();
-					disableAllBtn();
 					tcYourDetails.Enabled=false;
-					btnCard1.Enabled=true;
 					btnCard1.Focus();
 				}
 			}
@@ -164,7 +151,6 @@ namespace LetMeGuessYourBirthDate
 		{
 			Graphics graphics = e.Graphics;
 			Rectangle gradient_rectangle = new Rectangle(0, 0, Width, Height);
-			//Brush b=new HatchBrush(HatchStyle.DiagonalBrick,Color.Wheat);
 			Brush b = new LinearGradientBrush(gradient_rectangle, Color.White, Color.FromArgb(57, 128, 227),LinearGradientMode.Vertical);
 			graphics.FillRectangle(b, gradient_rectangle);
 		}
@@ -173,7 +159,6 @@ namespace LetMeGuessYourBirthDate
 		{
 			Graphics graphics = e.Graphics;
 			Rectangle gradient_rectangle = new Rectangle(0, 0, Width, Height);
-			//Brush b=new HatchBrush(HatchStyle.DiagonalBrick,Color.Wheat);
 			Brush b = new LinearGradientBrush(gradient_rectangle, Color.FromArgb(57, 128, 227), Color.FromArgb(0, 0, 0),LinearGradientMode.Vertical);
 			graphics.FillRectangle(b, gradient_rectangle);
 		}
@@ -182,7 +167,6 @@ namespace LetMeGuessYourBirthDate
 		{
 			Graphics graphics = e.Graphics;
 			Rectangle gradient_rectangle = new Rectangle(0, 0, Width, Height);
-			//Brush b=new HatchBrush(HatchStyle.DiagonalBrick,Color.Red,Color.Yellow);
 			Brush b = new LinearGradientBrush(gradient_rectangle, Color.FromArgb(0, 0, 0), Color.FromArgb(57, 128, 227), LinearGradientMode.BackwardDiagonal);
 			graphics.FillRectangle(b, gradient_rectangle);
 		}
@@ -199,6 +183,9 @@ namespace LetMeGuessYourBirthDate
 			}
 			pe.PlaySpeech(objSys);
 			dgvCard1.ClearSelection();
+			disableAllBtn();
+			btnCard1.Enabled=true;
+			tcYourDetails.Enabled=true;
 			tbYourFirstName.Focus();
 		}
 		
