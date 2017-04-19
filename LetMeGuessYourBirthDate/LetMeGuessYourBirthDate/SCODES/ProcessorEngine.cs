@@ -63,6 +63,49 @@ namespace LetMeGuessYourBirthDate
 			dt.Rows.Add(cardArr[12],cardArr[13],cardArr[14],cardArr[15]);
 			return dt;
 		}
+		private int getBirthMonth(string month)
+		{
+			int num=0;
+			switch (month) {
+				case "JAN":
+					num=1;
+					break;
+				case "FEB":
+					num=2;
+					break;
+				case "MAR":
+					num=3;
+					break;
+				case "APR":
+					num=4;
+					break;
+				case "MAY":
+					num=5;
+					break;
+				case "JUN":
+					num=6;
+					break;
+				case "JUL":
+					num=7;
+					break;
+				case "AUG":
+					num=8;
+					break;
+				case "SEP":
+					num=9;
+					break;
+				case "OCT":
+					num=10;
+					break;
+				case "NOV":
+					num=11;
+					break;
+				case "DEC":
+					num=12;
+					break;
+			}
+			return num;
+		}
 		public int getCellValue(System.Windows.Forms.DataGridView dgv)
 		{
 			System.Windows.Forms.DataGridViewCell dgvRow=dgv.FirstDisplayedCell;
@@ -120,6 +163,12 @@ namespace LetMeGuessYourBirthDate
 		{
 			objSys.Rate=speachRate;
 			objSys.Speak("Hello "+MrOrMrs(genderDetails)+" "+firstName+" "+lastName+", You Born On "+bDate+" "+birthMonth+" "+birthYear+" ");
+			int month=getBirthMonth(birthMonth);
+			if(DateTime.Now.Month==month && DateTime.Now.Date.Day==bDate)
+			{
+				int years=DateTime.Now.Year-Convert.ToInt32(birthYear);
+				objSys.Speak("Hello "+MrOrMrs(genderDetails)+"  "+firstName+" "+lastName+", You have completed "+years+" Years today, Happy Birthday to you");
+			}
 			return true;
 		}
 		public void DisableSelected(System.Windows.Forms.DataGridView dgv)
