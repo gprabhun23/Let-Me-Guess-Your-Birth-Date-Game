@@ -155,8 +155,8 @@ namespace LetMeGuessYourBirthDate
 		public bool InitialSpeech(SpeechSynthesizer objSys,string genderDetails,string firstName,string lastName,int speachRate)
 		{
 			objSys.Rate=speachRate;
-			objSys.Speak("Hello "+MrOrMrs(genderDetails)+" "+firstName+" "+lastName+" Welcome to Let me Guess your Birth Date GAME");
-			objSys.Speak("Now you can find 5 cards , Just check weather your birthdate is present in each and every card, the press next button and verify your answer in yes or no dialogue");
+			objSys.Speak("Hello "+MrOrMrs(genderDetails)+" "+firstName+" "+lastName+" Welcome to Let me Guess your Birth Date Puzzle GAME");
+			objSys.Speak("You Can Find 5 Different Cards , Just check weather your birthdate is present in each and every card, the press next button and verify your answer in yes or no dialogue");
 			return true;
 		}
 		public bool EndSpeech(SpeechSynthesizer objSys,string genderDetails,string firstName,string lastName,int bDate,string birthMonth,string birthYear,int speachRate)
@@ -178,6 +178,10 @@ namespace LetMeGuessYourBirthDate
 		public void PlaySpeech(SpeechSynthesizer objSys)
 		{
 			objSys.Speak("Hi, Let's Play the Game ");
+		}
+		public void EntrySpeech(SpeechSynthesizer objSys,string texts)
+		{
+			objSys.Speak(texts);
 		}
 		public void OnLoad(SpeechSynthesizer objSys)
 		{
@@ -203,6 +207,10 @@ namespace LetMeGuessYourBirthDate
 			{
 				objSys.Speak("Good Night, Today is "+weekDay+"");
 			}
+		}
+		public void ByeText(SpeechSynthesizer objSys)
+		{
+			objSys.Speak("Bye Bye, Lets Meet Again");
 		}
 		public bool ValidateBeforeEnter(SpeechSynthesizer objSys,TextBox tbYourFirstName,TextBox tbYourLastName,TextBox tbBirthYear,ComboBox cbGender,ComboBox cbBirthMonth)
 		{

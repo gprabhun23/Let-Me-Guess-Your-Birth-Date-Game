@@ -29,6 +29,7 @@ namespace LetMeGuessYourBirthDate
 			dgv[2]=dgvCard3;
 			dgv[3]=dgvCard4;
 			dgv[4]=dgvCard5;
+			objSys.SelectVoiceByHints(VoiceGender.Female,VoiceAge.Child);
 		}
 		
 		void TbBirthYearKeyPress(object sender, KeyPressEventArgs e)
@@ -57,6 +58,7 @@ namespace LetMeGuessYourBirthDate
 		void CbBirthMonthEnter(object sender, EventArgs e)
 		{
 			SendKeys.Send("{F4}");
+			pe.EntrySpeech(objSys,"Select Your Birth Month");
 		}
 		
 		void TbBirthYearLeave(object sender, EventArgs e)
@@ -96,6 +98,7 @@ namespace LetMeGuessYourBirthDate
 		void CbGenderEnter(object sender, EventArgs e)
 		{
 			SendKeys.Send("{F4}");
+			pe.EntrySpeech(objSys,"Select Your Gender");
 		}
 		
 		void CbGenderKeyDown(object sender, KeyEventArgs e)
@@ -194,6 +197,7 @@ namespace LetMeGuessYourBirthDate
 		{
 			if(MessageBox.Show("Do you want to exit this game ??","Exit this Game",MessageBoxButtons.YesNo,MessageBoxIcon.Information)==DialogResult.Yes)
 			{
+				pe.ByeText(objSys);
 				this.Dispose();
 			}
 		}
@@ -388,6 +392,26 @@ namespace LetMeGuessYourBirthDate
 			{
 				cbBirthMonth.Focus();
 			}
+		}
+		
+		void GuessYourBirthDateFormClosing(object sender, FormClosingEventArgs e)
+		{
+			pe.ByeText(objSys);
+		}
+		
+		void TbYourFirstNameEnter(object sender, EventArgs e)
+		{
+			pe.EntrySpeech(objSys,"Enter Your First Name");
+		}
+		
+		void TbYourLastNameEnter(object sender, EventArgs e)
+		{
+			pe.EntrySpeech(objSys,"Enter Your Last Name");
+		}
+		
+		void TbBirthYearEnter(object sender, EventArgs e)
+		{
+			pe.EntrySpeech(objSys,"Enter Your Birth Year");
 		}
 	}
 }

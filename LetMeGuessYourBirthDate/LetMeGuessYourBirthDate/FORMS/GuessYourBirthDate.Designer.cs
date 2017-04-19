@@ -36,12 +36,12 @@ namespace LetMeGuessYourBirthDate
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.tcGYBDGame = new System.Windows.Forms.TabControl();
 			this.tcYourDetails = new System.Windows.Forms.TabPage();
 			this.cbGender = new System.Windows.Forms.ComboBox();
@@ -189,6 +189,7 @@ namespace LetMeGuessYourBirthDate
 			this.tbBirthYear.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TbBirthYearKeyDown);
 			this.tbBirthYear.Leave += new System.EventHandler(this.TbBirthYearLeave);
 			this.tbBirthYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbBirthYearKeyPress);
+			this.tbBirthYear.Enter += new System.EventHandler(this.TbBirthYearEnter);
 			// 
 			// label3
 			// 
@@ -223,6 +224,7 @@ namespace LetMeGuessYourBirthDate
 			this.tbYourLastName.TabIndex = 1;
 			this.tbYourLastName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TbYourLastNameKeyDown);
 			this.tbYourLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbYourLastNameKeyPress);
+			this.tbYourLastName.Enter += new System.EventHandler(this.TbYourLastNameEnter);
 			// 
 			// tbYourFirstName
 			// 
@@ -235,6 +237,7 @@ namespace LetMeGuessYourBirthDate
 			this.tbYourFirstName.TabIndex = 0;
 			this.tbYourFirstName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TbYourFirstNameKeyDown);
 			this.tbYourFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbYourFirstNameKeyPress);
+			this.tbYourFirstName.Enter += new System.EventHandler(this.TbYourFirstNameEnter);
 			// 
 			// label9
 			// 
@@ -294,14 +297,14 @@ namespace LetMeGuessYourBirthDate
 			this.dgvCard1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
 			this.dgvCard1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvCard1.ColumnHeadersVisible = false;
-			dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-			dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dgvCard1.DefaultCellStyle = dataGridViewCellStyle19;
+			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dgvCard1.DefaultCellStyle = dataGridViewCellStyle1;
 			this.dgvCard1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
 			this.dgvCard1.Location = new System.Drawing.Point(96, 43);
 			this.dgvCard1.Name = "dgvCard1";
@@ -346,24 +349,24 @@ namespace LetMeGuessYourBirthDate
 			this.dgvCard2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvCard2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.dgvCard2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-			dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvCard2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvCard2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			this.dgvCard2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvCard2.ColumnHeadersVisible = false;
-			dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-			dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dgvCard2.DefaultCellStyle = dataGridViewCellStyle21;
+			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dgvCard2.DefaultCellStyle = dataGridViewCellStyle3;
 			this.dgvCard2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
 			this.dgvCard2.Location = new System.Drawing.Point(96, 43);
 			this.dgvCard2.Name = "dgvCard2";
@@ -409,14 +412,14 @@ namespace LetMeGuessYourBirthDate
 			this.dgvCard3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
 			this.dgvCard3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvCard3.ColumnHeadersVisible = false;
-			dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-			dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dgvCard3.DefaultCellStyle = dataGridViewCellStyle22;
+			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dgvCard3.DefaultCellStyle = dataGridViewCellStyle4;
 			this.dgvCard3.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
 			this.dgvCard3.Location = new System.Drawing.Point(96, 43);
 			this.dgvCard3.Name = "dgvCard3";
@@ -462,14 +465,14 @@ namespace LetMeGuessYourBirthDate
 			this.dgvCard4.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
 			this.dgvCard4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvCard4.ColumnHeadersVisible = false;
-			dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-			dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dgvCard4.DefaultCellStyle = dataGridViewCellStyle23;
+			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+			dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dgvCard4.DefaultCellStyle = dataGridViewCellStyle5;
 			this.dgvCard4.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
 			this.dgvCard4.Location = new System.Drawing.Point(96, 43);
 			this.dgvCard4.Name = "dgvCard4";
@@ -515,14 +518,14 @@ namespace LetMeGuessYourBirthDate
 			this.dgvCard5.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
 			this.dgvCard5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvCard5.ColumnHeadersVisible = false;
-			dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-			dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dgvCard5.DefaultCellStyle = dataGridViewCellStyle24;
+			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dgvCard5.DefaultCellStyle = dataGridViewCellStyle6;
 			this.dgvCard5.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
 			this.dgvCard5.Location = new System.Drawing.Point(96, 43);
 			this.dgvCard5.Name = "dgvCard5";
@@ -616,6 +619,7 @@ namespace LetMeGuessYourBirthDate
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "LET ME GUESS YOUR BIRTHDATE !";
 			this.Load += new System.EventHandler(this.GuessYourBirthDateLoad);
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GuessYourBirthDateFormClosing);
 			this.tcGYBDGame.ResumeLayout(false);
 			this.tcYourDetails.ResumeLayout(false);
 			this.tcYourDetails.PerformLayout();
