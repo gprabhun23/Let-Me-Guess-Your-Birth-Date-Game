@@ -29,7 +29,7 @@ namespace LetMeGuessYourBirthDate
 			dgv[2]=dgvCard3;
 			dgv[3]=dgvCard4;
 			dgv[4]=dgvCard5;
-			objSys.SelectVoiceByHints(VoiceGender.Female,VoiceAge.Child);
+			objSys.SelectVoiceByHints(VoiceGender.Female,VoiceAge.Teen);
 		}
 		
 		void TbBirthYearKeyPress(object sender, KeyPressEventArgs e)
